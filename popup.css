@@ -1,0 +1,274 @@
+/* ═══════════════════════════════════════════
+   AD'IOS — popup.css v2.0
+   Identité : dark, tranchant, minimaliste
+   Fonts système — 0 requête externe
+   ═══════════════════════════════════════════ */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg       : #0a0a0a;
+  --surface  : #111111;
+  --surface2 : #181818;
+  --border   : #222222;
+  --accent   : #ff3d3d;
+  --accent-lo: rgba(255, 61, 61, 0.12);
+  --green    : #00e676;
+  --orange   : #ff9100;
+  --text-1   : #efefef;
+  --text-2   : #777;
+  --text-3   : #444;
+  --mono     : 'Courier New', Courier, monospace;
+  --sans     : -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  --radius   : 4px;
+}
+
+body {
+  width: 300px;
+  background: var(--bg);
+  color: var(--text-1);
+  font-family: var(--sans);
+  font-size: 13px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ─── Header ──────────────────────────────── */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 13px 15px 11px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.logo-icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.logo-text {
+  font-family: var(--mono);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--text-1);
+}
+
+/* Apostrophe accent rouge */
+.logo-text::before {
+  content: '';
+}
+
+.badge {
+  font-family: var(--mono);
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  padding: 3px 8px 2px;
+  border-radius: 2px;
+  background: var(--accent-lo);
+  color: var(--accent);
+  border: 1px solid rgba(255, 61, 61, 0.25);
+}
+
+.badge.inactive {
+  background: rgba(255,255,255,.03);
+  color: var(--text-3);
+  border-color: var(--border);
+}
+
+/* ─── Stats ───────────────────────────────── */
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 1px solid var(--border);
+}
+
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 14px 10px 12px;
+  gap: 2px;
+}
+
+.stat-card + .stat-card {
+  border-left: 1px solid var(--border);
+}
+
+.stat-value {
+  font-family: var(--mono);
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--text-1);
+  letter-spacing: -0.02em;
+}
+
+.stat-card:first-child .stat-value {
+  color: var(--accent);
+}
+
+.stat-label {
+  font-size: 9px;
+  color: var(--text-3);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+/* ─── Légende stratégies ──────────────────── */
+.legend {
+  display: flex;
+  gap: 0;
+  border-bottom: 1px solid var(--border);
+  padding: 0;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex: 1;
+  justify-content: center;
+  padding: 6px 4px;
+  font-size: 9px;
+  color: var(--text-3);
+  letter-spacing: 0.03em;
+  border-right: 1px solid var(--border);
+}
+
+.legend-item:last-child {
+  border-right: none;
+}
+
+.dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.dot.green  { background: var(--green); }
+.dot.orange { background: var(--orange); }
+.dot.red    { background: var(--accent); }
+
+/* ─── Journal ─────────────────────────────── */
+.log-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.log-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 7px 15px 5px;
+  border-bottom: 1px solid var(--border);
+}
+
+.log-title {
+  font-family: var(--mono);
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-3);
+}
+
+.clear-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 9px;
+  color: var(--text-3);
+  font-family: var(--sans);
+  padding: 0;
+  transition: color .15s;
+}
+.clear-btn:hover { color: var(--text-2); }
+
+.log-list {
+  max-height: 120px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+}
+.log-list::-webkit-scrollbar       { width: 2px; }
+.log-list::-webkit-scrollbar-thumb { background: var(--border); }
+
+.log-empty {
+  padding: 16px 15px;
+  font-size: 10px;
+  color: var(--text-3);
+  font-style: italic;
+}
+
+.log-item {
+  display: flex;
+  align-items: baseline;
+  gap: 7px;
+  padding: 5px 15px;
+  border-bottom: 1px solid rgba(255,255,255,.025);
+  animation: slideIn .2s ease;
+}
+.log-item:last-child { border-bottom: none; }
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-6px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+.log-time {
+  font-family: var(--mono);
+  font-size: 8px;
+  color: var(--text-3);
+  flex-shrink: 0;
+  letter-spacing: 0.04em;
+}
+
+.log-msg {
+  font-size: 10px;
+  color: var(--text-2);
+  flex: 1;
+  word-break: break-word;
+  line-height: 1.4;
+}
+
+.log-item.success .log-msg { color: var(--green); }
+.log-item.warn    .log-msg { color: var(--orange); }
+.log-item.error   .log-msg { color: var(--accent); }
+
+/* ─── Footer ──────────────────────────────── */
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 7px 15px;
+  border-top: 1px solid var(--border);
+  background: var(--surface);
+  font-size: 8px;
+  color: var(--text-3);
+  letter-spacing: 0.05em;
+}
+
+.footer-brand {
+  font-family: var(--mono);
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.1em;
+}
+
+.footer-sep {
+  color: var(--border);
+}
