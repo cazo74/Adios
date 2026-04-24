@@ -177,7 +177,7 @@ Les PRs sont les bienvenues pour :
 
 ## License
 
-MIT © 2026 [Yannick Cazorla](https://yannickcazorla.com)
+MIT © 2026 2ktel
 
 ---
 
@@ -185,6 +185,6 @@ MIT © 2026 [Yannick Cazorla](https://yannickcazorla.com)
 
 **AD = publicité &nbsp;·&nbsp; ' = le skip &nbsp;·&nbsp; IOS = adios**
 
-*Built with ☕ in Haute-Savoie, France*
+*Built with splif in Haute-Savoie, France* pour le monde entier ! 
 
 </div>
