@@ -20,6 +20,28 @@ Instantanément. Localement. Sans base de données externe.
 
 ---
 
+### Chrome
+1. Téléchargez le ZIP → https://github.com/cazo74/Adios/archive/refs/heads/main.zip
+2. Dézippez le fichier
+3. Ouvrez Chrome → collez dans la barre d'adresse : chrome://extensions
+4. Activez "Mode développeur" (toggle en haut à droite)
+5. Cliquez "Charger l'extension non empaquetée"
+6. Sélectionnez le dossier dézippé
+7. C'est installé ✅
+
+### Opera
+Même procédure → opera://extensions
+
+### Edge
+Même procédure → edge://extensions
+
+### Android (Kiwi Browser)
+1. Installez Kiwi Browser depuis le Play Store
+2. Même procédure que Chrome ci-dessus
+
+⚠️ Ne supprimez pas le dossier après installation,
+Chrome en a besoin en permanence.
+
 ## Pourquoi AD'IOS ?
 
 YouTube diffuse des pubs de plus en plus agressives — pré-rolls non-skippables, bannières mid-video, overlays intrusifs. Les bloqueurs réseau classiques sont efficaces mais de plus en plus ciblés par YouTube.
